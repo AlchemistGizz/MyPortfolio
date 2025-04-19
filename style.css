@@ -1,6 +1,6 @@
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  
 }
 
 
@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
   background: linear-gradient(45deg, #2f3029, #e0e8e9,#191919);
-
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -197,7 +197,7 @@ transform: translateX(0);
 
 #cover {
   opacity: 0;
-  transform: translateX(100%);
+  transform: translateX(50vw);
 }
 
 #cover.visible {
