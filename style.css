@@ -1,0 +1,270 @@
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(45deg, #2f3029, #e0e8e9,#191919);
+
+}
+
+.navbar {
+  background: linear-gradient(to right, #a7a4a4, #ffffff, #bbbaad);
+  position: fixed;
+}
+
+
+#cover{
+  background-image: url(https://img.freepik.com/free-vector/white-abstract-background_23-2148817572.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+padding-bottom: 100px;
+  
+}
+#cover h3{
+  font-family: "Josefin Slab", serif;
+
+  
+}
+#cover h1{
+  font-family: "Rokkitt", serif;
+  margin-top: 50%;
+}
+
+.img-fluid { 
+  border-radius: 50%;
+  opacity: 0.9;
+  margin-top: 60px;
+ padding-left: 5px;
+ padding-right: 5px;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  background: linear-gradient(to right, #a7a4a4, #ffffff, #bbbaad);
+  
+}
+.card img, #image2,.social-icons a img {
+  filter: grayscale(100%);
+  transition: all 0.4s ease;
+  transform: scale(1);
+}
+.card img:hover,#image2:hover,.social-icons a img:hover{
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+.card-body a {
+  color: black;
+  text-decoration: none;
+}
+#projects{
+  background: linear-gradient(45deg, #2f3029, #e0e8e9,#191919);
+  padding-top: 50px;
+  
+  
+}
+.tools {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.tools img {
+  width:30px; 
+  height: 40px;
+  margin: 0 8px; 
+}
+
+
+ #about{
+  font-family: "Josefin Slab", serif;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 400;
+  background: linear-gradient(45deg, #2f3029, #70797b,#d3d4c4);
+  
+ }
+
+#about h1{
+  margin-top: 50px;
+  margin-bottom: -20px;
+}
+#rights {
+  color: rgb(184, 174, 158);
+}
+
+#name {
+  font-family: "PT Serif", serif;
+
+
+}
+
+#noClick {
+  
+  margin-top: -10px;
+  margin-bottom: 8px;
+}
+
+ul a img {
+  filter: grayscale(100%);
+  transition: all 0.4s ease;
+  transform: scale(1);
+  width: 30px;
+  height: 30px;
+}
+
+ul a img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+#contact{
+  background: linear-gradient(45deg, #4f504e, #969b9c,#1e1e1d);
+  padding-top: 50px;
+ height: auto;
+
+}
+#contact h2{
+  padding-bottom: 20px;
+}
+
+.social-icons a img {
+  margin-bottom: 60px;
+  width: 80px;
+  height:80px ;
+  
+
+}
+
+
+/*mail accorion*/
+#mail a p{
+  text-decoration: none;
+}
+.accordion-mail {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+#gmail-address {
+  display: none;
+  margin-top: 8px;
+  font-family: Arial, sans-serif;
+}
+.section {
+  padding: 50px;
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: #f5f5f5;
+  margin-bottom: 20px;
+  border-radius: 12px;
+}
+#dividers{
+  background: linear-gradient(to right, #a7a4a4, #ffffff, #bbbaad);
+
+}
+#dividers ol li{
+  font-size: 30px;font-family: "Josefin Slab", serif;
+}
+#dividers ol li a{
+  color: #191919;
+  font-family: "Rokkitt", serif;
+  margin-top:- 10px;
+  margin-left: 30px;
+  font-size: 30px;
+  
+}
+
+
+/*scroll animation jsWith*/
+#about  {  opacity: 0;
+transform: translateX(-100px);
+transition: all 1.5s ease-out;
+}
+#about.visible {
+opacity: 1;
+transform: translateX(0);
+}
+
+#cover {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+#cover.visible {
+  animation: slideIn 1s forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+.card   {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.card.visible{
+  opacity: 1;
+  transform: scale(1);
+}
+
+/*Logo Shake Effects*/
+@keyframes shake {
+  0% { transform: translate(0); }
+  25% { transform: translate(-1px, 1px); }
+  50% { transform: translate(1px, -1px); }
+  75% { transform: translate(-1px, -1px); }
+  100% { transform: translate(1px, 1px); }
+}
+.social-icons:hover {
+  animation: shake 0.5s infinite;
+}
+
+/*divider effects*/
+#dividers li {
+  opacity: 0;
+  transform: translateY(-50px); 
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+#dividers li.visible {
+  opacity: 1;
+  transform: translateY(0);  
+}
+
+/*Responsive*/
+@media (max-width: 768px) {
+  #cover .row {
+    flex-direction: column;
+  }
+
+  #cover .col-md-6 {
+    margin-bottom: 20px; 
+  }
+
+  #cover .col-md-6 img {
+    width: 100%; 
+    height: auto;
+  }
+
+  #cover .col-md-6 h1 {
+    margin-top: -20px; 
+}
+}
